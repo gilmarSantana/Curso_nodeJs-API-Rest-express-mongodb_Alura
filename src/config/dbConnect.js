@@ -1,7 +1,9 @@
 import mongoose from "mongoose"
 
-async function DBCONNECT() {
-  mongoose.connect("mongodb+srv://gilmarr:8628473@cluster0.jfrlsmp.mongodb.net/livraria?retryWrites=true&w=majority")
+async function DBCONNECT(db_name) {
+  mongoose.connect(`mongodb+srv://gilmarr:8628473@cluster0.jfrlsmp.mongodb.net/${db_name}?retryWrites=true&w=majority`)
+
+
 
   return mongoose.connection
 
